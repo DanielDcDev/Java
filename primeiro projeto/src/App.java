@@ -6,12 +6,48 @@ public class App {
         System.out.println("Olá Mundo\nQual exercicio deseja vizualizar - 01 calculadora\n");
         opcao = Integer.parseInt(sca.nextLine());
         if(opcao==1){
-            calculadora();
+            Calculadora();
+        }else if(opcao==2){
+            Emprestimo();
         }
 
     }
+    private static void Erro(){
+        System.out.println("Erro, favor reinicie o app");
+    }
     
-    public static void calculadora(){
+    private static void Emprestimo() {
+        Scanner sc = new Scanner(System.in);
+        int vezes;
+        double valorOriginal, valorFinal;
+        
+        System.out.println("Qual o valor original do produto: ");
+        valorOriginal = Integer.parseInt(sc.nextLine());
+        System.out.println("Em quantas vezes você deseja dividir a sua compra?:\n01\n02\n03 ");
+        vezes = Integer.parseInt(sc.nextLine());
+        if(vezes==01){
+
+        }else if(vezes==02){
+
+        }else if(vezes==03){
+
+        }else if(vezes==04){
+
+        }else{
+            Erro();
+        }
+    }
+
+    public static double getTaxaDuasParcelas() {
+
+        return 0.3;
+    }
+    public static double getTaxaTresParcelas() {
+
+        return 0.45;
+    }
+
+    public static void Calculadora(){
         int n1, n2, res, op;
         Scanner sc = new Scanner(System.in);
         System.out.println("Qual calculo deseja fazer?\n01->Soma\n02->Subtração\n03->Divisão\n04->Multiplição\n05-Média");
